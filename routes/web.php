@@ -17,7 +17,12 @@ Route::get('/Home', function () {
     $header = ['Home', 'Products', 'Help', 'About'];
     
 
-    return view('home', compact("header" ));
+    return view('Home', compact("header" ));
+});
+
+Route::get('/', function () {
+    $header = ['Home', 'Products', 'Help', 'About'];
+    return view('Home', compact("header" ));
 });
 
 Route::get('/Products', function () {
