@@ -13,8 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $home = 'Benvenuto nella home page!!';
+Route::get('/Home', function () {
+    $header = ['Home', 'Products', 'Help', 'About'];
+    
 
-    return view('home', compact("home"));
+    return view('home', compact("header" ));
+});
+
+Route::get('/Products', function () {
+    
+    return view('Products');
+});
+
+Route::get('/Help', function () {
+    
+    return view('Help');
+});
+
+Route::get('/About', function () {
+    
+    return view('About');
 });
